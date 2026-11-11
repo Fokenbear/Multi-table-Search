@@ -48,9 +48,10 @@
 
 | 项目 | 状态 |
 | --- | --- |
+| PyInstaller 打包 + 打包后自检 | **已验证**：on-dir 产物 118 MB、187 个文件，`MultiTableSearch.exe --self-test` 退出码 0 |
 | Windows 10 1809+ 真机运行 | 未执行（开发机是 Windows 11） |
 | WPS COM 打开并定位到单元格 | 未执行（当前用 `RecordingOpener` 替身；`app/windows/wps_opener.py` 有真实实现但未联调） |
-| 真实大文件导入性能（20MB+、28 个工作表） | 未执行 |
+| 真实大文件导入性能（20MB+、28 个工作表） | 只做过人工观察，未做目标环境基准 |
 | Inno Setup 安装包与卸载 | 未执行（构建机未安装 Inno Setup 6） |
 | 100% / 150% / 200% DPI | 未执行 |
 | 长时间运行与并发取消 | 未执行 |
