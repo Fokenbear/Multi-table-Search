@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=78,<79"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-table-search"
+version = "2.0.0"
+description = "离线多表格统一检索系统：把一个料号查遍任意多个 Excel 工作簿的每个工作表"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Forken" }]
+keywords = ["excel", "xlsx", "search", "desktop", "pyside6", "offline", "part-number"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "PySide6==6.12.0",
+    "openpyxl==3.1.5",
+    "pywin32==312; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "pytest-qt==4.5.0", "pyinstaller==6.22.3"]
+
+[project.gui-scripts]
+multi-table-search = "app.main:main"
+
+[project.urls]
+Homepage = "https://github.com/minghaochina2007-cyber/multi-table-search"
+Repository = "https://github.com/minghaochina2007-cyber/multi-table-search"
+Issues = "https://github.com/minghaochina2007-cyber/multi-table-search/issues"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"

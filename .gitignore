@@ -1,0 +1,40 @@
+# Business workbooks must never be committed.
+*.xlsx
+*.xlsm
+*.xls
+*.xlsb
+*.xltx
+*.xltm
+*.csv
+*.tsv
+
+# Local data directory used by --data-dir during development.
+data/
+test_data/private/*
+!test_data/private/.gitkeep
+
+# Environments, caches, databases, logs and build output.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage*
+htmlcov/
+build/
+dist/
+*.spec
+*.db
+*.db-*
+*.sqlite*
+workbooks/
+backups/
+logs/
+*.log
+.env
+.env.*
+.idea/
+.vscode/
+Thumbs.db
